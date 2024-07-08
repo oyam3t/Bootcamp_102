@@ -60,9 +60,9 @@ Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir aray
 ![2](https://github.com/oyam3t/Bootcamp_102/assets/154666832/3eb8cdd1-154a-4a71-83e7-e22655d22382)  
 
 ## Sprint Review
+* Sprint içerisinde tamamlanması beklenen tüm görevleri tamamlayamadık (tamamlanan/tamamlanması hedeflenen puan: 14/30).
 * Oyunumuza isim bulmakta bir süre zorlandık. Bir süre isimsiz ilerledikten sonra bir sprint toplantımızda “Brush Crush” ismine karar verdik.
 * Takım içi iletişimde ve planlamada bazı aksaklıklar yaşandı.
-* Sprint içerisinde tamamlanması beklenen tüm görevleri tamamlayamadık.
 * Sprint 1 genel olarak bazı gecikmelere ve iletişim problemlerine rağmen ekip arası dinamiklerin anlaşılması & oyunumuzun temel özelliklerine karar verebilmek açısından verimli geçti. Önümüzdeki sprintlerde daha iyi iletişim kurarak ve zaman yönetimine daha fazla dikkat ederek daha hızlı ilerleme kaydetmemiz mümkün olacaktır.
 * **Sprint Review katılımcıları:** Oya Metiner, Berke Özcan, Merve Tuncer
 
