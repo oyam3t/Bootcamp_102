@@ -21,7 +21,7 @@ public class Gem : MonoBehaviour
     private Vector2 ftp;
     private Vector2 etp;
     public float angle = 0;
-    public float resist = .3f;
+    public float resist = 1f;
 
     // Start is called before the first frame update
     void Start()
