@@ -21,18 +21,18 @@ public class Gem : MonoBehaviour
     private Vector2 ftp;
     private Vector2 etp;
     public float angle = 0;
-    public float resist = 1f;
+    public float resist = .3f;
 
     // Start is called before the first frame update
     void Start()
     {
         board = FindAnyObjectByType<Board>();
-        tarX = (int)transform.position.x;
-        tarY = (int)transform.position.y;
-        col = tarX;
-        row = tarY;
-        prevCol = col;
-        prevRow = row;
+        //tarX = (int)transform.position.x;
+        //tarY = (int)transform.position.y;
+        //col = tarX;
+        //row = tarY;
+        //prevCol = col;
+        //prevRow = row;
     }
 
     // Update is called once per frame
@@ -92,13 +92,23 @@ public class Gem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        ftp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if(board.currentState == GameState.move)
+        {
+            ftp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
     private void OnMouseUp()
     {
-        etp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        calcAngle();
+        if (board.currentState == GameState.move)
+        {
+            etp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            calcAngle();
+        }
+        else
+        {
+            board.currentState = GameState.move;
+        }
     }
 
     void calcAngle()
@@ -106,8 +116,8 @@ public class Gem : MonoBehaviour
         if (Mathf.Abs(ftp.x - etp.x) > resist || Mathf.Abs(ftp.y - etp.y) > resist)
         {
             angle = Mathf.Atan2(etp.y - ftp.y, etp.x - ftp.x) * 180 / Mathf.PI;
-            Debug.Log(angle);
             MovePieces();
+            board.currentState = GameState.wait;
         }
     }
 
@@ -117,8 +127,8 @@ public class Gem : MonoBehaviour
         {
             //Right Swipe
             otherGem = board.allGems[col + 1, row];
-            //previousRow = row;
-            //previousColumn = column;
+            prevRow = row;
+            prevCol = col;
             otherGem.GetComponent<Gem>().col -=1;
             col += 1;
             //StartCoroutine(CheckMoveCo());
@@ -129,8 +139,8 @@ public class Gem : MonoBehaviour
         {
             //Up Swipe
             otherGem = board.allGems[col, row + 1];
-            //previousRow = row;
-            //previousColumn = column;
+            prevRow = row;
+            prevCol = col;
             otherGem.GetComponent<Gem>().row -=1;
             row += 1;
             //StartCoroutine(CheckMoveCo());
@@ -140,8 +150,8 @@ public class Gem : MonoBehaviour
         {
             //Left Swipe
             otherGem = board.allGems[col - 1, row];
-            //previousRow = row;
-            //previousColumn = column;
+            prevRow = row;
+            prevCol = col;
             otherGem.GetComponent<Gem>().col +=1;
             col -= 1;
             //StartCoroutine(CheckMoveCo());
@@ -151,8 +161,8 @@ public class Gem : MonoBehaviour
         {
             //Down Swipe
             otherGem = board.allGems[col, row - 1];
-            //previousRow = row;
-            //previousColumn = column;
+            prevRow = row;
+            prevCol = col;
             otherGem.GetComponent<Gem>().row +=1;
             row -= 1;
             //StartCoroutine(CheckMoveCo());
@@ -179,11 +189,12 @@ public class Gem : MonoBehaviour
                 col = prevCol;
                 yield return new WaitForSeconds(.5f);
                 //board.currentDot = null;
-                //board.currentState = GameState.move;
+                board.currentState = GameState.move;
             }
             else
             {
                 board.DestroyMatches();
+                
             }
             otherGem = null;
         }

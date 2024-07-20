@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameState
+{
+    wait,
+    move
+}
+
+
 public class Board : MonoBehaviour
 {
+    public GameState currentState = GameState.move;
+
     public int height;
     public int width;
     public GameObject tilePrefab;
     public GameObject[] tiles;
+    public int offset;
     
     private BackgroundTile[,] allTiles;
 
@@ -28,7 +38,7 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                Vector2 tempPos = new Vector2(i, j);
+                Vector2 tempPos = new Vector2(i, j + offset);
                 GameObject bgTile = Instantiate(tilePrefab, tempPos, Quaternion.identity) as GameObject;
 
                 bgTile.transform.parent = this.transform;
@@ -43,6 +53,8 @@ public class Board : MonoBehaviour
                 }
 
                 GameObject tile = Instantiate(tiles[tileToUse], tempPos, Quaternion.identity);
+                tile.GetComponent<Gem>().row = j;
+                tile.GetComponent<Gem>().col = i;
 
                 tile.transform.parent = this.transform;
                 tile.name = "(" + i + "," + j + ")";
@@ -172,13 +184,78 @@ public class Board : MonoBehaviour
             nullCount = 0;
         }
         yield return new WaitForSeconds(0.5f);
-        //StartCoroutine(FillBoardCo());
+        StartCoroutine(FillBoardCo());
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void RefillBoard()
     {
-        
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (allGems[i, j] == null)
+                {
+                    Vector2 tempPosition = new Vector2(i, j + offset);
+                    int tileToUse = Random.Range(0, tiles.Length);
+
+                    //while (MatchesAt(i, j, tiles[tileToUse]))
+                    //{
+                    //    tileToUse = Random.Range(0, tiles.Length);
+                    //}
+
+                    GameObject piece = Instantiate(tiles[tileToUse], tempPosition, Quaternion.identity);
+                    allGems[i, j] = piece;
+                    piece.GetComponent<Gem>().row = j;
+                    piece.GetComponent<Gem>().col = i;
+
+                }
+            }
+        }
     }
+
+    private bool MatchesOnBoard()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (allGems[i, j] != null)
+                {
+                    if (allGems[i, j].GetComponent<Gem>().matched)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private IEnumerator FillBoardCo()
+    {
+        RefillBoard();
+        yield return new WaitForSeconds(.5f);
+
+        while (MatchesOnBoard())
+        {
+            //streakValue++;
+            DestroyMatches();
+            yield return new WaitForSeconds(2);
+
+        }
+        //findMatches.currentMatches.Clear();
+        //currentDot = null;
+
+
+        //if (IsDeadlocked())
+        //{
+        //    StartCoroutine(ShuffleBoard());
+        //    Debug.Log("Deadlocked!!!");
+        //}
+        yield return new WaitForSeconds(.5f);
+        currentState = GameState.move;
+        //streakValue = 1;
+
+    }
+
 }
