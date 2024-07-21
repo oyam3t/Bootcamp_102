@@ -71,3 +71,31 @@ Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir aray
 * Takım üyelerinin gelecek sprintlerde aktif rol alması gerektiği vurgulanmıştır.
 * Takım üyelerinin zaman yönetimini daha iyi yapması gerektiği vurgulanmıştır.
 
+---
+
+# Sprint 2  
+
+* **Sprint Süresi:** 2 Hafta
+* **Tarih:** 07.07.24 - 21.07.24
+
+* Sprint içi puan değerlendirmesi 46 olarak belirlenmiştir.
+* **Puan tamamlama mantığı:** Her sprint için en az 30 puan tamamlanması planlanmıştır. 1. Sprint'ten kalan tamamlanamayan görevler ile birlikte (16 puan), bu sprintte toplam 46 puan tamamlanması hedeflenmiştir.
+
+![Ekran Görüntüsü (78)](https://github.com/user-attachments/assets/a96e5161-6d56-4b36-a569-e6a38c520fc2)
+![WhatsApp Image 2024-07-21 at 13 13 09](https://github.com/user-attachments/assets/8294a6d5-08ce-4397-a9bc-070621457d27)
+![WhatsApp Image 2024-07-21 at 13 13 10](https://github.com/user-attachments/assets/dc5c99a0-3a2b-4c74-9c23-a905b6856d47)
+
+![Brush Crush ilk draft](https://github.com/user-attachments/assets/6135b275-b2c7-4337-a8ea-8cc6a797c9ca)
+
+## Sprint Review
+* Oyun içi objeler arası swipe mekaniği, düşme animasyonları ve refill metodu tamamlandı
+* Takım içi iletişimde ve planlamada yaşanan aksaklıklar azaldı.
+* Sprint 2 içerisinde Sprint 1’de tamamlanılamayan görevler ve grafiklerin yenilenmesi hariç tüm Sprint 2 görevleri tamamlandı (42/46).
+* Bu sprint süresi bütün takım üyelerinin yoğun olduğu bir zamana denk geldiği için daha çok whatsapp üzerinden iletişim kurulmuştur.
+* **Sprint Review katılımcıları:** Meryem Çiftci, Oya Metiner, Berke Özcan, Merve Tuncer
+
+## Sprint Retrospective:
+* Oyun grafiklerinin yenilenmesi bir sonraki sprinte kalmıştır.
+* Oyun içi mekaniklerde büyük ilerleme kaydedilmiştir, bir sonraki sprintte güçlendirmeler eklenerek oyun mekanikleri tamamlanacaktır.
+* Takım üyelerinin gelecek sprintlerde aktif rol alması gerektiği vurgulanmıştır.
+
