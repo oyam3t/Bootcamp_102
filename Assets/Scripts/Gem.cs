@@ -10,6 +10,7 @@ public class Gem : MonoBehaviour
     public int row;
     private Board board;
     private GameObject otherGem;
+    public matchfinder matchfinder;
     public bool matched = false;
 
     public int prevCol;
@@ -27,6 +28,7 @@ public class Gem : MonoBehaviour
     void Start()
     {
         board = FindAnyObjectByType<Board>();
+        matchfinder = FindAnyObjectByType<matchfinder>();
         //tarX = (int)transform.position.x;
         //tarY = (int)transform.position.y;
         //col = tarX;
@@ -38,7 +40,7 @@ public class Gem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FindMatch();
+        //FindMatch();
         if (matched)
         {
             SpriteRenderer sprite = GetComponent<SpriteRenderer>();
@@ -55,7 +57,7 @@ public class Gem : MonoBehaviour
             {
                 board.allGems[col, row] = this.gameObject;
             }
-            //findMatches.FindAllMatches();
+            matchfinder.FindAllMatches();
         }
         else
         {
@@ -74,7 +76,7 @@ public class Gem : MonoBehaviour
             {
                 board.allGems[col, row] = this.gameObject;
             }
-            //findMatches.FindAllMatches();
+            matchfinder.FindAllMatches();
 
         }
         else

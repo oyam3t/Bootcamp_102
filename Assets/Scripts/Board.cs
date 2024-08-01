@@ -19,8 +19,9 @@ public class Board : MonoBehaviour
     public GameObject tilePrefab;
     public GameObject[] tiles;
     public int offset;
-    
+
     private BackgroundTile[,] allTiles;
+    public matchfinder matchfinder;
 
     public GameObject[,] allGems;
 
@@ -29,6 +30,7 @@ public class Board : MonoBehaviour
     {
         allTiles = new BackgroundTile[height, width];
         allGems = new GameObject[width, height];
+        matchfinder = FindAnyObjectByType<matchfinder>();
         SetUp();
     }
 
@@ -39,7 +41,7 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 Vector2 tempPos = new Vector2(i, j + offset);
-                GameObject bgTile = Instantiate(tilePrefab, tempPos, Quaternion.identity) as GameObject;
+                GameObject bgTile = Instantiate(tilePrefab, new Vector3(i,j+offset,0.2f), Quaternion.identity) as GameObject;
 
                 bgTile.transform.parent = this.transform;
                 bgTile.name = "(" + i + "," + j + ")";
@@ -160,7 +162,7 @@ public class Board : MonoBehaviour
                 }
             }
         }
-        //findMatches.currentMatches.Clear();
+        matchfinder.currentMatches.Clear();
         StartCoroutine(DecreaseRowCo());
     }
 
@@ -231,6 +233,8 @@ public class Board : MonoBehaviour
         return false;
     }
 
+    
+
     private IEnumerator FillBoardCo()
     {
         RefillBoard();
@@ -243,7 +247,7 @@ public class Board : MonoBehaviour
             yield return new WaitForSeconds(2);
 
         }
-        //findMatches.currentMatches.Clear();
+        matchfinder.currentMatches.Clear();
         //currentDot = null;
 
 
