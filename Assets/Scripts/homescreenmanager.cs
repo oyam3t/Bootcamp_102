@@ -11,6 +11,7 @@ public class homescreenmanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         StartCoroutine(wait());
     }
 
@@ -24,7 +25,9 @@ public class homescreenmanager : MonoBehaviour
 
     public void playButtonOnClick()
     {
+
         Debug.Log("play button");
+
         //DİĞER SAHNEYE GEÇ
     }
 }
