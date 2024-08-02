@@ -9,7 +9,6 @@ public enum GameState
     move
 }
 
-
 public class Board : MonoBehaviour
 {
     public GameState currentState = GameState.move;

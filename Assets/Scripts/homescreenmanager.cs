@@ -10,12 +10,13 @@ public class homescreenmanager : MonoBehaviour
     public GameObject playButton;
     public GameObject logo;
     public GameObject creditsbutton;
-    
+    public AudioSource AudioSource;
+    public GameObject creditscanvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        Screen.orientation = ScreenOrientation.Portrait;
+        AudioSource.Play();
         StartCoroutine(wait());
     }
 
@@ -35,11 +36,23 @@ public class homescreenmanager : MonoBehaviour
         Debug.Log("play button");
 
         SceneManager.LoadScene(sceneName: "Levelselect");
-        //DİĞER SAHNEYE GEÇ
     }
 
     public void creditsOnClick()
     {
+        creditscanvas.SetActive(true);
+        mainscreen.SetActive(false);
+        playButton.SetActive(false);
+        logo.SetActive(false);
+        creditsbutton.SetActive(false);
+    }
 
+    public void backtomainmenu()
+    {
+        creditscanvas.SetActive(false);
+        mainscreen.SetActive(true);
+        playButton.SetActive(true);
+        logo.SetActive(true);
+        creditsbutton.SetActive(true);
     }
 }

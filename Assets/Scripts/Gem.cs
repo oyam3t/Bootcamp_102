@@ -125,6 +125,7 @@ public class Gem : MonoBehaviour
 
     void MovePieces()
     {
+        this.GetComponent<AudioSource>().Play();
         if (angle > -45 && angle <= 45 && col < board.width - 1)
         {
             //Right Swipe
