@@ -14,10 +14,13 @@ Brush Crush
 ## Trello Board Link
 [Trello Board - Takım Unity102](https://trello.com/b/Mcl8IgeS/bootcamp102)
 
+## Brush Crush Demo Video
+[Brush Crush Demo Video](https://www.youtube.com/watch?v=q4gmKKnnpgo)
+
 ## Ürün Açıklaması
 **Brush Crush!** - Renkli taşların büyülü dünyasına adım atın ve match-3 bulmacalarını çözerek zihninizi eğitin! Bu heyecan verici oyun, her yaştan oyuncunun saatlerce eğlenmesini sağlayacak.
 
-Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir araya getirerek onları ortadan kaldırmaktır. Her seviyede farklı bir renk hedefiniz olacak ve puanınızı artırmak için kombolar ve güçlendirmeler oluşturabileceksiniz. Seviye ilerledikçe gizemli sanat puzzleları çözmeye hak kazanacaksınız. Unutmayın, bir sanat eserinin farklı insanlara farklı şeyler ifade edebilir!
+Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir araya getirerek onları ortadan kaldırmaktır. Her seviyede farklı bir renk hedefiniz olacak, arkanıza yaslanın ve rahatlatıcı klasik müzik eşliğinde hedeflerinize ulaşın. Seviye ilerledikçe gizemli sanat puzzleları çözmeye hak kazanacaksınız. Unutmayın, bir sanat eserinin farklı insanlara farklı şeyler ifade edebilir!
 
 ## Ürün Özellikleri
 * Match 3  
@@ -45,13 +48,14 @@ Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir aray
 * **Puan tamamlama mantığı:** Toplamda proje boyunca (3 sprint) tamamlanması gereken 100 puanlık backlog bulunmaktadır. Bu süre 3 sprint'e bölündüğünde, ilk sprint'in en azından 30 ile başlanması gerektiğine karar verildi.
 * **Daily Scrum:** Toplantılarda zamansal problemlerden kaynaklı olabildikçe Whatsapp üzerinden, mümkün oldukça discord üzerinden görüşmeler sağlanmıştır. Bütün takım bir grupta iletişim kurmuştur.
 
+![Ekran Görüntüsü (73)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/32827b4e-9c5a-484d-984c-94d61467baf1)  
+
 ![WhatsApp Image 2024-07-07 at 12 02 05 (3)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/da21bfa8-f40f-47e8-8143-8763e041b9e8)  
 ![WhatsApp Image 2024-07-07 at 12 02 05 (2)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/0554fe55-824d-48b0-965c-5fa8d42420ce)  
 ![WhatsApp Image 2024-07-07 at 12 02 05 (1)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/177ae380-1c43-4de4-884f-493c1c855840)  
 ![WhatsApp Image 2024-![Ekran Görüntüsü (72)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/d8255a96-83a2-471f-aadd-de9d9a5288a8)  
 07-07 at 12 02 05](https://github.com/oyam3t/Bootcamp_102/assets/154666832/e6a5bfd1-b608-4135-b77b-dd4f348b6799)  
 
-![Ekran Görüntüsü (73)](https://github.com/oyam3t/Bootcamp_102/assets/154666832/32827b4e-9c5a-484d-984c-94d61467baf1)  
 ![WhatsApp Image 2024-07-07 at 17 50 06](https://github.com/oyam3t/Bootcamp_102/assets/154666832/d863c42d-56f3-4da9-a609-68718aa5e271)  
 ![WhatsApp Image 2024-07-07 at 17 49 50](https://github.com/oyam3t/Bootcamp_102/assets/154666832/5011e689-606d-408c-a886-0bd8e79d30dd)  
 
@@ -99,3 +103,31 @@ Brush Crush’da, amacınız aynı renkteki üç veya daha fazla taşı bir aray
 * Oyun içi mekaniklerde büyük ilerleme kaydedilmiştir, bir sonraki sprintte güçlendirmeler eklenerek oyun mekanikleri tamamlanacaktır.
 * Takım üyelerinin gelecek sprintlerde aktif rol alması gerektiği vurgulanmıştır.
 
+---
+
+# Sprint 3  
+
+* **Sprint Süresi:** 12 Gün
+* **Tarih:** 22.07.24 - 02.08.24
+
+* Sprint içi puan değerlendirmesi 44 olarak belirlenmiştir.
+* **Puan tamamlama mantığı:**  Her sprint için en az 30 puan tamamlanması planlanmıştır. Geçmiş sprintten kalan tamamlanamayan görev ile birlikte (4 puan), bu sprintte toplam 44 puan tamamlanması hedeflenmiştir.
+
+![Ekran Görüntüsü (9)](https://github.com/user-attachments/assets/e7d9b639-3419-44f1-8cbe-69c49d7a5ed9)
+![WhatsApp Image 2024-08-02 at 09 52 42](https://github.com/user-attachments/assets/122b7bee-3f0c-4186-804c-aa1518391b33)
+![WhatsApp Image 2024-08-02 at 09 52 41](https://github.com/user-attachments/assets/643dc1a8-ee62-4add-98fc-68571341f499)
+![WhatsApp Image 2024-08-02 at 09 52 40 (2)](https://github.com/user-attachments/assets/47fab437-03fd-4452-9813-c0ddbad83f8b)
+
+
+[**Brush Crush Demo Video**](https://www.youtube.com/watch?v=q4gmKKnnpgo)
+
+## Sprint Review
+* Oyun içi grafikler (puzzle ekranı, oyun içi objeler, credits ekranı) yenilendi.
+* Oyun içi ses ve müzik efektleri eklendi.
+* Yapay zekayı zaman sınırlamalarından dolayı oyunumuza entegre edemedik.
+* Sprint 3 içerisinde Sprint 2’de tamamlanamayan grafiklerin yenilenmesi görevi ile birlikte kalan görevlerden oyunumuza yapay zeka entegrasyonu hariç bütün görevler tamamlandı (37/44).
+* Bu sprint bütün takım için önemli olduğu için daha çok günlük olarak Discord üzerinden iletişim kurulmuştur.
+* **Sprint Review katılımcıları:** Meryem Çiftci, Oya Metiner, Berke Özcan, Merve Tuncer
+
+## Sprint Retrospective:
+* Ekip olarak Mezuniyet Bootcamp’imizin bitişi kutlandı, takım üyeleri tebrik edildi ve gelecek projelerde iletişimde kalınacağı konuşuldu.
